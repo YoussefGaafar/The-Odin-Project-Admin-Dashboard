@@ -1,0 +1,314 @@
+/* Start Global Variables */
+:root {
+    --aside-background-color: #38bdf8;
+    --profile-background-color: #facc15;
+    --projects-side-color: #eab308;
+    --button-color: #0284c7;
+    --section-padding: 30px 30px;
+    --main-margin-bottom: 10px;
+}
+
+/* End Global Variables */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto Flex", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+body .container {
+    display: flex;
+}
+
+
+/* End Global Rules */
+
+/* Start Aside Rules */
+aside {
+    background-color: var(--aside-background-color);
+    width: 25svw;
+    height: 100svh;
+    padding: var(--section-padding);
+}
+
+aside ul {
+    line-height: 44px;
+    padding-left: 5px;
+}
+
+aside i {
+    margin-right: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+aside .head-sidebar {
+    font-size: 2rem;
+    margin-bottom: 60px;
+}
+
+aside .head-sidebar i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+
+aside .main-sidebar {
+    margin-bottom: 60px;
+}
+
+aside .foot-sidebar {
+    margin-bottom: 60px;
+}
+
+/* End Aside Rules */
+
+/* Start Main Rules */
+main {
+    width: 75svw;
+    height: 100svh;
+
+}
+
+/* End Main Rules */
+
+/* Start Main Header Rules */
+
+main .head-container {
+    background-color: white;
+    height: 20svh;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--section-padding);
+    /*box shadow at bottom*/
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .head-container img {
+    width: 64px;
+    background-color: var(--profile-background-color);
+    border-radius: 50%;
+}
+
+main .left-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .left-container .search {
+    margin-bottom: 44px;
+}
+
+main .left-container .search i {
+    margin-right: 20px;
+}
+
+main .left-container .search input {
+    background-color: #cbd5e1;
+    border: none;
+    width: 92%;
+    padding: 5px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+main .left-container .welcome {
+    position: relative;
+}
+
+main .left-container .welcome h4 {
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    width: fit-content;
+}
+
+main .left-container .welcome h2 {
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    width: fit-content;
+}
+
+main .right-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+main .right-container .notification {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+main .right-container .notification img {
+    width: 2rem;
+    margin-left: 20px;
+}
+
+main .right-container .notification i {
+    font-size: 2rem;
+    color: black;
+    margin-right: 10px;
+}
+
+main .right-container .notification h4 {
+    margin-left: 48px;
+    font-size: 1rem;
+}
+
+main .right-container .action-btns {
+    display: flex;
+    margin-top: 43px;
+}
+
+main .right-container .action-btns a {
+    color: white;
+    background-color: var(--aside-background-color);
+    padding: 8px;
+    width: 32%;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+main .right-container .action-btns a:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* End Main Header Rules */
+
+/* Start Main Section Rules */
+main .main-container {
+    padding: var(--section-padding);
+    height: 80svh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    background-color: #e2e8f0;
+}
+
+main .main-container .box-container {
+    border-radius: 10px;
+}
+
+main .main-container .projects {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+main .main-container .projects h3 {
+    margin-bottom: 20px;
+}
+
+main .main-container .projects .box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+}
+
+main .main-container .projects .box-container .box {
+    background-color: white;
+    /* top right bottom left */
+    padding: 30px 10px 45px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #eab308;
+    position: relative;
+    min-height: 150px;
+    border-radius: 10px;
+
+}
+
+main .main-container .projects .box-container .box p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+main .main-container .projects .box-container .box .icons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+main .main-container .announcements .box-container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .main-container .announcements .box-container .box {
+    margin-bottom: 20px;
+}
+
+main .main-container .announcements .box-container .box p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+main .main-container .announcements h3 {
+    margin-bottom: var(--main-margin-bottom);
+}
+
+main .main-container .trending .box-container {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .main-container .trending h3 {
+    margin-bottom: var(--main-margin-bottom);
+}
+
+main .main-container .trending .box img {
+    width: 3rem;
+}
+
+main .main-container .trending .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main .main-container .trending .box .text {
+    margin-left: 15px;
+}
+
+main .main-container .trending .box p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* End Main Section Rules */
