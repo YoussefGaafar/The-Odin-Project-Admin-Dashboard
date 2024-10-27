@@ -129,7 +129,7 @@ main .left-container .search input {
     width: 92%;
     padding: 5px;
     border-radius: 14px;
-    text-align: center;
+    outline: #cbd5e1;
 }
 
 main .left-container .welcome {
